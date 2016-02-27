@@ -1,0 +1,24 @@
+{
+    "name": "recon/reddit-wallpaper-downloader",
+    "authors": [
+        {
+            "name": "Corneliu Popescu",
+            "email": "corneliupr@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/console": "^3.0",
+        "symfony/filesystem": "^3.0",
+        "symfony/http-foundation": "^3.0",
+        "pimple/pimple": "^3.0",
+        "propel/propel": "~2.0@dev",
+        "guzzlehttp/guzzle": "^6.1",
+        "symfony/yaml": "^3.0",
+        "lsolesen/pel": "^0.9.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    }
+}

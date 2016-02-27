@@ -1,0 +1,32 @@
+propel:
+  database:
+      connections:
+          default:
+              adapter: sqlite
+              classname: Propel\Runtime\Connection\ConnectionWrapper
+              dsn: "sqlite:storage/db.sqlite"
+              user:
+              password:
+              attributes:
+  runtime:
+      defaultConnection: default
+      connections:
+          - default
+  generator:
+      defaultConnection: default
+      connections:
+          - default
+  paths:
+      # The directory where Propel should output classes, sql, config, etc.
+      # Default value is current path #
+      #outputDir: current-path
+
+      # The directory where Propel should output generated object model classes.
+      phpDir: src
+
+      # The directory where Propel should output the compiled runtime configuration.
+      phpConfDir: src/Config/Propel
+
+      # The directory where Propel should output the generated DDL (or data insert statements, etc.)
+      #sqlDir: current-path/generated-sql
+

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database name="default" defaultIdMethod="native">
+    <table name="records" phpName="Record" namespace="Model">
+        <column name="id" type="integer" required="true" primaryKey="true" autoIncrement="true"/>
+        <column name="reddit_post_name" type="varchar" size="10" required="true"/>
+        <column name="subreddit_name" type="varchar" size="255" required="true"/>
+        <column name="media_url" type="varchar" required="true" />
+        <column name="author" type="varchar" size="90" />
+        <column name="title" type="varchar" size="511"/>
+        <column name="is_crawled" type="boolean" default="0"/>
+        <column name="created_at" type="timestamp"/>
+
+        <behavior name="validate">
+             <parameter name="unique_reddit_post_name" value="{column: reddit_post_name, validator: Unique}" />
+        </behavior>
+    </table>
+</database>
+
